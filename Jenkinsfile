@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-              git 'https://github.com/uSErNAmEB1/docker-node-jenkins.git '
+              git branch: 'main', url: 'https://github.com/uSErNAmEB1/docker-node-jenkins.git'
             }
         }
         stage('Build Docker Image') {
