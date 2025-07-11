@@ -1,8 +1,10 @@
-const http = require('http');
-const port = 3000;
-const server = http.createServer((req, res) => {
-    res.end("Hello from Jenkins + Docker + Node.js App!");
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello from Node App');
 });
-server.listen(port, () => {
-    console.log(`Server running at port ${port}`);
+
+app.listen(4000, () => {
+  console.log('App is running on port 4000');
 });
